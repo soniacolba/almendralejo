@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contacto</title>
+</head>
+<body class="body">
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="tradiciones.html">Tradiciones</a></li>
+                <li><a href="datosEstadisticos.html">Datos Estadísticos</a></li>
+                <li><a href="informacionTuristica.html">Información Turística</a></li>
+                <li><a href="contenidoMultimedia.html">Contenido Multimedia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <h1 class="encabezado">Contacto</h1>
+    </article>
+    <section class="formulario_contacto">
+        <h2>¡Contáctanos!</h2>
+        <form action="procesar_formulario.php" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="apellido1">Primer apellido</label>
+            <input type="text" id="apellido1" name="apellido1" required>
+            <label for="apellido2">Segundo apellido</label>
+            <input type="text" id="apellido2" name="apellido2">
+            <label for="correo_electronico">Correo electrónico</label>
+            <input type="email" id="correo_electronico" name="correo_electronico" required>
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" rows="5" required placeholder="Escribe aquí tu mensaje"></textarea>
+            <p> <span class="texto_contacto">¿Cómo prefieres que te contactemos?</span></p>
+            <label>
+                <input type="radio" name="metodo_contacto" value="correo"> Correo electrónico
+            </label>
+            <label>
+                <input type="radio" name="metodo_contacto" value="telefono"> Teléfono
+            </label>
+            <p><span class="texto_contacto">Suscríbete a nuestro boletín</span></p>
+            <label>
+                <input type="checkbox" name="suscripcion" value="si"> Sí, quiero recibir novedades.
+            </label>
+            <label for="motivo">Motivo de contacto</label>
+            <select name="motivo" id="motivo" required>
+                <option value="" disabled selected>Elige un motivo</option>
+                <option value="informacion">Solicitar información</option>
+                <option value="queja">Realizar una queja</option>
+                <option value="sugerencia">Enviar una sugerencia</option>
+            </select>
+            <button type="submit" name="enviar">Enviar formulario 
+            <button type="reset" name="limpiar">Borrar datos
+        </form>
+    </section>
+</body>
+</html>
